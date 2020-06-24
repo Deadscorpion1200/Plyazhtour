@@ -1,0 +1,199 @@
+.header
+  padding-top: 25px
+  padding-bottom: 25px
+  background: linear-gradient(180deg, #063A72 0%, rgba(0, 65, 131, 0) 100%)
+.header-container
+  padding: 0
+.header-wrap
+  display: flex
+  justify-content: space-between
+  align-items: center
+.header-logo__img
+  width: 120px
+  height: 70px
+.header-navigation__list
+  display: flex
+  width: 598px
+  justify-content: space-between
+.header-navigation__item
+  &:first-child, &:nth-child(2)
+    display: flex
+    position: relative
+    &:after
+      content: ''
+      width: 0 
+      height: 0
+      border-left: 3px solid transparent
+      border-right: 3px solid transparent
+      border-top: 5px solid #ffffff
+      margin-top: 7px
+      margin-left: 5px
+  &:hover
+    .header-navigation__sublist
+      display: block
+.header-navigation__link
+  color: #ffffff
+  text-decoration: none
+  font-size: 18px
+  line-height: 22px
+  font-family: 'Montserrat Regular'
+  text-transform: uppercase
+  &:hover
+    border-bottom: 2px solid $accent-color
+
+.header-contacts
+  display: flex
+  justify-content: space-between
+  align-items: center
+.header-contacts__coral
+  margin-right: 24px
+.header-contacts__phone
+  display: block
+.header-contacts__title
+  margin-bottom: 5px
+  text-align: center
+  font-family: 'Montserrat Bold'
+  font-size: 14px
+  line-height: 17px
+  color: $accent-color
+.header-contacts__logo
+  margin-left: 5px
+.header-contacts__phones
+  text-align: right
+.header-contacts__phone 
+  font-family: 'Montserrat Medium'
+  color: #ffffff
+  text-decoration: none
+  line-height: 20px
+  font-size: 17px
+  margin-bottom: 7px
+  &:hover
+    color: $accent-color
+  &:last-child
+    margin-bottom: 0
+.header-contacts__phone_adaptive
+  display: block
+.header__mobile-menu
+  display: none
+.adaptive-menu
+  display: none
+.header-navigation__sublist
+  display: none
+  position: absolute
+  top: 20px
+.header-navigation__sublink
+  display: block
+  font-size: 14px
+  line-height: 17px
+  padding-top: 8px
+  padding-bottom: 8px
+  border-bottom: 0.5px solid #fff
+  text-decoration: none
+  color: #ffffff
+  text-transform: uppercase
+  &:hover
+    border-bottom: 1px solid $accent-color
+@media (max-width: 1200px)
+  .header-navigation__list
+    flex-wrap: wrap
+    width: 345px
+  .header-navigation__item
+    &:first-child, &:nth-child(2)
+      margin-bottom: 5px
+    &:last-child
+      transform: translateX(-53px)
+@media (max-width: 991px)
+  .header-navigation__list
+    width: 240px
+  .header-navigation__item
+    &:last-child
+      transform: translateX(-38px)
+  .header-navigation__link
+    font-size: 12px
+    line-height: 15px
+  .header-contacts__title
+    font-size: 10px
+  .header-contacts__phone
+    font-size: 12px
+    line-height: 15px
+  .header-contacts__logo
+    height: 12px
+  .header-navigation__sublink
+    font-size: 10px
+    padding-bottom: 4px
+    padding-top: 4px
+  .header-navigation__sublist
+    top: 15px
+@media (max-width: 768px)
+  .header-logo__img
+    width: 85.71px
+    height: 50px
+  .header-navigation__list
+    width: 200px
+@media (max-width: 576px)
+  .header-container
+    padding-left: 15px
+    padding-right: 15px
+  .header-navigation
+    display: none
+  .header__mobile-menu
+    display: flex
+    z-index: 10
+  .header-mobile-menu__btn
+    width: 30px
+    height: 23px
+    position: relative
+  .header-mobile-menu__text
+    position: absolute
+    top: 50%
+    margin-top: -1.5px
+    width: 30px
+    height: 3px
+    background-color: $accent-color
+    border-radius: 3px
+    &::before
+      position: absolute
+      content: ''
+      width: 30px
+      height: 3px
+      background-color: $accent-color
+      transform: translateY(-10px)
+      transition: 0.3s
+    &::after
+      position: absolute
+      content: ''
+      width: 30px
+      height: 3px
+      background-color: $accent-color
+      transform: translateY(10px)
+      transition: 0.3s
+  .header-mobile-menu__btn_active .header-mobile-menu__text
+    height: 0
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+  .adaptive-menu
+    display: none
+    position: absolute
+    background-color: $main-color
+    height: 100vh
+    width: 100%
+    transition: 0.3s
+    top: 0
+    padding-top: 25px
+    padding-bottom: 25px
+    &_active
+      display: flex
+@media (max-width: 430px)
+  .header-contacts__phone_adaptive
+    display: none
+  .header-contacts
+    flex-wrap: wrap
+    justify-content: center
+@media (max-width: 392px)
+  .header-contacts__coral
+    margin-right: 10px
+@media (max-width: 377px)
+  .header-contacts__coral
+    margin-right: 0
