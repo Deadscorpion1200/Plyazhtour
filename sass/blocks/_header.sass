@@ -19,6 +19,7 @@
   &:first-child, &:nth-child(2)
     display: flex
     position: relative
+    z-index: 3
     &:after
       content: ''
       width: 0 
@@ -28,9 +29,22 @@
       border-top: 5px solid #ffffff
       margin-top: 7px
       margin-left: 5px
+      z-index: 1
   &:hover
+    .hedaer-navigation-substrate-one
+      height: 282px
+      transition: 0.2s 
+      border: 1px solid $accent-color
+    .hedaer-navigation-substrate-two
+      height: 155px
+      border: 1px solid $accent-color
+      transition: 0.2s 
     .header-navigation__sublist
       display: block
+    &:first-child, &:nth-child(2)
+      &:after
+        transition: 0.2s
+        transform: rotate(180deg)
 .header-navigation__link
   color: #ffffff
   text-decoration: none
@@ -38,9 +52,29 @@
   line-height: 22px
   font-family: 'Montserrat Regular'
   text-transform: uppercase
+  position: relative
+  z-index: 1
   &:hover
-    border-bottom: 2px solid $accent-color
-
+    &:after
+      left: 0
+      bottom: -2px
+      position: absolute
+      content: ''
+      width: 100%
+      height: 2px
+      background: $accent-color
+.hedaer-navigation-substrate, .hedaer-navigation-substrate-one .hedaer-navigation-substrate-two 
+  position: absolute
+  display: inline-block
+  background: $main-color
+  width: 180px
+  left: -8px
+  top: -10px
+  border-radius: 10px
+.hedaer-navigation-substrate-two
+  height: 0px
+.hedaer-navigation-substrate-one
+  height: 0px
 .header-contacts
   display: flex
   justify-content: space-between
@@ -75,8 +109,7 @@
   display: block
 .header__mobile-menu
   display: none
-.adaptive-menu
-  display: none
+
 .header-navigation__sublist
   display: none
   position: absolute
@@ -86,13 +119,15 @@
   font-size: 14px
   line-height: 17px
   padding-top: 8px
-  padding-bottom: 8px
+  padding-bottom: 5px
   border-bottom: 0.5px solid #fff
   text-decoration: none
   color: #ffffff
   text-transform: uppercase
   &:hover
     border-bottom: 1px solid $accent-color
+.header-navigation__sublink_last
+  border: none
 @media (max-width: 1200px)
   .header-navigation__list
     flex-wrap: wrap
@@ -105,9 +140,24 @@
 @media (max-width: 991px)
   .header-navigation__list
     width: 240px
+  .hedaer-navigation-substrate
+    width: 130px
   .header-navigation__item
     &:last-child
       transform: translateX(-38px)
+    &:first-child
+      &:after
+        margin-top: 5px
+      &:hover
+        .hedaer-navigation-substrate-one
+          height: 242px
+    &:nth-child(2)
+      &:after
+        margin-top: 5px
+      &:hover
+        .hedaer-navigation-substrate-two
+          height: 130px
+        
   .header-navigation__link
     font-size: 12px
     line-height: 15px
@@ -128,12 +178,6 @@
   .header-logo__img
     width: 85.71px
     height: 50px
-  .header-navigation__list
-    width: 200px
-@media (max-width: 576px)
-  .header-container
-    padding-left: 15px
-    padding-right: 15px
   .header-navigation
     display: none
   .header__mobile-menu
@@ -173,18 +217,10 @@
       transform: rotate(45deg)
     &::after
       transform: rotate(-45deg)
-  .adaptive-menu
-    display: none
-    position: absolute
-    background-color: $main-color
-    height: 100vh
-    width: 100%
-    transition: 0.3s
-    top: 0
-    padding-top: 25px
-    padding-bottom: 25px
-    &_active
-      display: flex
+@media (max-width: 576px)
+  .header-container
+    padding-left: 15px
+    padding-right: 15px
 @media (max-width: 430px)
   .header-contacts__phone_adaptive
     display: none

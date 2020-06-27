@@ -1,0 +1,44 @@
+.adaptive-menu
+  display: none
+.adaptive-container
+  padding: 0
+.adaptive-navigation-item__more
+  background: transparent
+  color: #ffffff
+  border: none
+.adaptive-navigation__sublist, .adaptive-navigation__sublist-two
+  margin-left: 15px
+  display: none
+  &_active
+    display: block
+.adaptive-navigation__sublink
+  font-size: 10px
+  padding-bottom: 4px
+  padding-top: 4px
+  text-decoration: none
+  color: #ffffff
+  text-transform: uppercase
+  line-height: 14px
+@media (max-width: 768px)
+  .adaptive-menu
+    display: none
+    position: absolute
+    background-color: $main-color
+    height: 100vh
+    width: 100%
+    transition: 0.3s
+    top: 0
+    padding-top: 28px
+    padding-bottom: 28px
+    &_active
+      display: flex
+  .adaptive-logo__img
+    margin-bottom: 10px
+  .adaptive-navigation__item
+    margin-bottom: 5px
+    &:last-child
+      margin-bottom: 0
+@media (max-width: 576px)
+  .adaptive-container
+    padding-left: 15px
+    padding-right: 15px
