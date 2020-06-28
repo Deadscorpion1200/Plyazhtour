@@ -155,7 +155,7 @@ button, input {
 }
 
 .header-navigation__item:hover .hedaer-navigation-substrate-one {
-  height: 282px;
+  height: 248px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   border: 1px solid #FE9704;
@@ -296,7 +296,6 @@ button, input {
   border-bottom: 0.5px solid #fff;
   text-decoration: none;
   color: #ffffff;
-  text-transform: uppercase;
 }
 
 .header-navigation__sublink:hover {
@@ -337,7 +336,7 @@ button, input {
     margin-top: 5px;
   }
   .header-navigation__item:first-child:hover .hedaer-navigation-substrate-one {
-    height: 242px;
+    height: 208px;
   }
   .header-navigation__item:nth-child(2):after {
     margin-top: 5px;
@@ -600,6 +599,17 @@ button, input {
   position: relative;
   -webkit-transform: translateY(-123px);
           transform: translateY(-123px);
+  z-index: 0;
+}
+
+.main-header {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#063a72));
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #063a72 100%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  height: 123px;
 }
 
 .main__slide {
