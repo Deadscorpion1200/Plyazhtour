@@ -1,9 +1,11 @@
+// JS
 // анимация меню-гамбургера
 $('.header-mobile-menu__btn').on('click', function(e){
   e.preventDefault();
   $(this).toggleClass('header-mobile-menu__btn_active');
   $('.adaptive-menu').toggleClass('adaptive-menu_active');
 });
+// Анимация многоуровневых списков
 $('.adaptive-navigation-item__more-one').on('click', function(e){
   e.preventDefault();
   console.log(1)
@@ -12,4 +14,11 @@ $('.adaptive-navigation-item__more-one').on('click', function(e){
 $('.adaptive-navigation-item__more-two').on('click',function(e){
   e.preventDefault();
   $('.adaptive-navigation__sublist-two').toggleClass('adaptive-navigation__sublist-two_active');
+});
+
+// jquery
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1
+  });
 });
