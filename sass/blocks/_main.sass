@@ -2,20 +2,42 @@
   position: relative
   transform: translateY(-123px)
   z-index: 0
-.main-header
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(6,58,114,1) 100%)
+.main-text
   position: absolute
+  width: 1140px
+  height: 100%
+  margin: auto
+  left: 0
+  right: 0
   top: 0
-  width: 100%
+  bottom: 0
   z-index: 5
-  height: 123px
-.main__slide
-  background-size: contain
-  height: 900px
-  width: 100%
-@media (max-width: 768px)
-  .main
-    height: 564px
-@media (max-width: 576px)
-  .main
-    height: 800px
+  display: flex
+  justify-content: center
+  align-items: center
+.main-title
+  font-family: 'Open Sans'
+  font-size: 48px
+  line-height: 65px
+  color: #ffffff
+  max-width: 570px
+  position: absolute
+  top: 370px
+.main-arrows
+  position: relative
+.main-arrows__left
+  position: absolute
+  left: -75px
+  width: 22px
+  height: 43px
+  cursor: pointer
+  background: url('../img/main/arrow-left.png')
+  border: none
+.main-arrows__right
+  position: absolute
+  right: -75px
+  width: 22px
+  height: 43px
+  cursor: pointer
+  background: url('../img/main/arrow-right.png')
+  border: none

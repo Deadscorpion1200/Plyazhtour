@@ -18,7 +18,9 @@ $('.adaptive-navigation-item__more-two').on('click',function(e){
 
 // jquery
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1
+  $('.main-slider').slick({
+    fade: true,
+    prevArrow: '.main-arrows__left',
+    nextArrow: '.main-arrows__right',
   });
 });

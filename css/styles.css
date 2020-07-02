@@ -92,6 +92,9 @@ button, input {
   padding-bottom: 25px;
   background: -webkit-gradient(linear, left top, left bottom, from(#063A72), to(rgba(0, 65, 131, 0)));
   background: linear-gradient(180deg, #063A72 0%, rgba(0, 65, 131, 0) 100%);
+  z-index: 10;
+  position: absolute;
+  width: 100%;
 }
 
 .header-container {
@@ -602,31 +605,58 @@ button, input {
   z-index: 0;
 }
 
-.main-header {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#063a72));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #063a72 100%);
+.main-text {
   position: absolute;
+  width: 1140px;
+  height: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
+  bottom: 0;
   z-index: 5;
-  height: 123px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main__slide {
-  background-size: contain;
-  height: 900px;
-  width: 100%;
+.main-title {
+  font-family: 'Open Sans';
+  font-size: 48px;
+  line-height: 65px;
+  color: #ffffff;
+  max-width: 570px;
+  position: absolute;
+  top: 370px;
 }
 
-@media (max-width: 768px) {
-  .main {
-    height: 564px;
-  }
+.main-arrows {
+  position: relative;
 }
 
-@media (max-width: 576px) {
-  .main {
-    height: 800px;
-  }
+.main-arrows__left {
+  position: absolute;
+  left: -75px;
+  width: 22px;
+  height: 43px;
+  cursor: pointer;
+  background: url("../img/main/arrow-left.png");
+  border: none;
+}
+
+.main-arrows__right {
+  position: absolute;
+  right: -75px;
+  width: 22px;
+  height: 43px;
+  cursor: pointer;
+  background: url("../img/main/arrow-right.png");
+  border: none;
 }
 /*# sourceMappingURL=styles.css.map */
