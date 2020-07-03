@@ -659,4 +659,8 @@ button, input {
   background: url("../img/main/arrow-right.png");
   border: none;
 }
+
+.main-slide-img {
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */
